@@ -1,0 +1,15 @@
+ros-rolling-parameter-expression (0.0.2-1noble) noble; urgency=high
+
+  * Merge pull request #1 <https://github.com/ForteFibre/parameter_expression/issues/1> from ForteFibre/fix/pkg-config
+    Add pkg-config as build dependencies
+  * Add pkg-config as build dependencies
+  * Apply formatter
+  * Change to Apache License 2.0
+  * Add README
+  * Move from our internal library
+  * initial commit
+  * Contributors: f0reachARR, ぐるぐる
+
+ -- f0reachARR <f0reach@f0reach.me>  Mon, 22 Sep 2025 15:00:00 -0000
+
+
