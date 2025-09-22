@@ -1,0 +1,36 @@
+name: pr_test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - target-ros2-distro: humble
+            ubuntu-codename: jammy
+          - target-ros2-distro: jazzy
+            ubuntu-codename: noble
+          - target-ros2-distro: rolling
+            ubuntu-codename: noble
+    container:
+      image: rostooling/setup-ros-docker:ubuntu-${{ matrix.ubuntu-codename }}-ros-${{ matrix.target-ros2-distro }}-ros-base-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Build and test
+        uses: ros-tooling/action-ros-ci@v0.4
+        with:
+          package-name: parameter_expression
+          target-ros2-distro: ${{ matrix.target-ros2-distro }}

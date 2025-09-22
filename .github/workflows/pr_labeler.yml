@@ -1,0 +1,12 @@
+name: pr_labeler
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  pr_labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Labeler
+        uses: actions/labeler@v5

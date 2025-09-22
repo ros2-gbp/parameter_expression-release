@@ -1,0 +1,10 @@
+documentation:
+  - head-branch: "^docs/"
+chore:
+  - head-branch: "^chore/"
+bug:
+  - head-branch: "^fix/"
+enhancement:
+  - head-branch: "^feature/"
+refactor:
+  - head-branch: "^refactor/"
