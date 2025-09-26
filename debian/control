@@ -1,0 +1,12 @@
+Source: ros-jazzy-parameter-expression
+Section: misc
+Priority: optional
+Maintainer: f0reachARR <f0reach@f0reach.me>
+Build-Depends: debhelper (>= 9.0.0), libmuparser-dev, pkg-config, ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-auto, ros-jazzy-ament-cmake-clang-format <!nocheck>, ros-jazzy-ament-cmake-gmock <!nocheck>, ros-jazzy-ament-cmake-gtest <!nocheck>, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-rclcpp, ros-jazzy-std-msgs, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-parameter-expression
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmuparser-dev, ros-jazzy-rclcpp, ros-jazzy-std-msgs, ros-jazzy-ros-workspace
+Description: Using mathematical expression in ROS 2 parameter
